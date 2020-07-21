@@ -1,0 +1,18 @@
+[27-Dec-2016 13:08:05 America/Chicago] PHP Parse error:  syntax error, unexpected '/' in /home3/dcard2010/public_html/xtest/phpFiles/config.ini.php on line 1
+[29-Dec-2016 16:03:03 America/Chicago] PHP Fatal error:  Class 'Db' not found in /home3/dcard2010/public_html/xtest/phpFiles/update.php on line 6
+[29-Dec-2016 16:04:37 America/Chicago] PHP Fatal error:  Class 'Db' not found in /home3/dcard2010/public_html/xtest/phpFiles/update.php on line 8
+[29-Dec-2016 16:05:34 America/Chicago] PHP Fatal error:  Class 'Db' not found in /home3/dcard2010/public_html/xtest/phpFiles/update.php on line 8
+[29-Dec-2016 16:06:15 America/Chicago] PHP Warning:  parse_ini_file(/phpFiles/config.ini.php): failed to open stream: No such file or directory in /home3/dcard2010/public_html/xtest/phpFiles/update.php on line 6
+[29-Dec-2016 16:06:15 America/Chicago] PHP Fatal error:  Class 'Db' not found in /home3/dcard2010/public_html/xtest/phpFiles/update.php on line 8
+[29-Dec-2016 16:07:32 America/Chicago] PHP Warning:  parse_ini_file(/phpFiles/config.ini.php): failed to open stream: No such file or directory in /home3/dcard2010/public_html/xtest/phpFiles/update.php on line 6
+[29-Dec-2016 16:07:32 America/Chicago] PHP Fatal error:  Class 'Db' not found in /home3/dcard2010/public_html/xtest/phpFiles/update.php on line 8
+[29-Dec-2016 16:08:05 America/Chicago] PHP Fatal error:  Class 'Db' not found in /home3/dcard2010/public_html/xtest/phpFiles/update.php on line 8
+[29-Dec-2016 16:21:35 America/Chicago] PHP Parse error:  syntax error, unexpected ':', expecting ',' or ';' in /home3/dcard2010/public_html/xtest/phpFiles/update.php on line 20
+[29-Dec-2016 16:40:21 America/Chicago] PHP Warning:  wordwrap() expects parameter 1 to be string, array given in /home3/dcard2010/public_html/xtest/phpFiles/update.php on line 18
+[29-Dec-2016 16:40:22 America/Chicago] PHP Warning:  wordwrap() expects parameter 1 to be string, array given in /home3/dcard2010/public_html/xtest/phpFiles/update.php on line 18
+[29-Dec-2016 16:40:22 America/Chicago] PHP Warning:  wordwrap() expects parameter 1 to be string, array given in /home3/dcard2010/public_html/xtest/phpFiles/update.php on line 18
+[29-Dec-2016 16:41:01 America/Chicago] PHP Warning:  wordwrap() expects parameter 1 to be string, array given in /home3/dcard2010/public_html/xtest/phpFiles/update.php on line 19
+[29-Dec-2016 16:41:01 America/Chicago] PHP Warning:  wordwrap() expects parameter 1 to be string, array given in /home3/dcard2010/public_html/xtest/phpFiles/update.php on line 19
+[29-Dec-2016 16:41:16 America/Chicago] PHP Warning:  wordwrap() expects parameter 1 to be string, array given in /home3/dcard2010/public_html/xtest/phpFiles/update.php on line 19
+[29-Dec-2016 16:41:16 America/Chicago] PHP Warning:  wordwrap() expects parameter 1 to be string, array given in /home3/dcard2010/public_html/xtest/phpFiles/update.php on line 19
+[29-Dec-2016 16:43:20 America/Chicago] PHP Parse error:  syntax error, unexpected '$msg' (T_VARIABLE) in /home3/dcard2010/public_html/xtest/phpFiles/update.php on line 20
