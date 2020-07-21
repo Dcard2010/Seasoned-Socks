@@ -1,0 +1,418 @@
+<?php 
+include ("/connect.php");
+session_start();
+
+$config = parse_ini_file('/config.ini');
+
+$db = new Db();
+
+if ($_POST) {
+    $note = $db -> quote($_POST['note']);
+
+    $insert = $db -> query("INSERT INTO notes (note) VALUES (" . $note . ")");
+}
+
+    $file = "/output.txt";
+    
+    var_dump(%_POST);
+
+?>
+
+<!DOCTYPE html>
+
+<html lang="en">
+    
+<head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    
+    <link rel="stylesheet" href="http://seasonedsocks.com/css/main.css">
+    
+    <link rel="stylesheet" href="http://seasonedsocks.com/css/slide-menu.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
+    
+    <script src="https://www.paypalobjects.com/api/checkout.js" data-version-4></script>
+</head>
+
+<style>
+    
+    .content-wrapper {
+        padding-top: 46px;
+    }
+
+    .content {
+    overflow: hidden;
+    margin: 0 auto;
+    }
+    
+    .navbar-right-link {
+        display: none !important;
+    }
+    
+    .left-half-container, .right-half-container {
+        width: 50%;
+    }
+    
+    .left-half-container {
+        float: left;
+        display: table;
+    }
+    
+    .left-half {
+        height: 785px;
+        /*display: table-cell;*/
+        vertical-align: middle;
+    }
+    
+    .left-half div {
+        background-image: url(http://seasonedsocks.com/img/grasscrop.jpg);
+        background-repeat: no-repeat;
+        width: 80%;
+        height: 400px;
+        display: block;
+        margin-top: 20%;
+        float: right;
+    }
+    
+    .right-half-container {
+        float: right;
+    }
+    
+    .right-half {
+        display: block;
+        margin: 0 auto;
+    }
+    
+    #order-box {
+        text-align: center;
+    }
+    
+    #order-box-title {
+        margin-top: 5%;
+        font-size: 1.3rem;
+    }
+    
+    #order-box-price {
+        font-size: 1.2rem;
+    }
+    
+    #order-box-text-limit {
+        margin-bottom: 0;
+        margin-top: 5%;
+    }
+    
+    hr {
+        width: 50%;
+        background-color: black;
+        margin-bottom: 2%;
+    }
+    
+    #note {
+        background-image: url(http://seasonedsocks.com/img/post-it2.png);
+        background-repeat: no-repeat;
+        height: 293px;
+        width: 400px;
+        margin: 0 auto;
+    }
+    
+    textarea {
+        resize: none;
+        height: 200px;
+        width: 250px;
+        margin-top: 11%;
+        background: transparent;
+        border: none;
+        outline: none;
+    }
+    
+    #button-add-to-cart {
+        margin: 2% 0 4% 0;
+    }
+    
+        @media (max-width: 1200px) {
+            .left-half-container, .right-half-container {
+                width: 100%;
+            }
+            
+            .left-half-container {
+                padding-top: 5%;
+            }
+            
+            .left-half {
+                height: auto;
+            }
+            
+            .left-half div {
+                width: 80%;
+                margin: 0 auto;
+                float: none;
+            }
+
+            .container {
+                width: 100%;
+            }
+
+            .navbar {
+                width: 100%;
+                padding: .1rem 0;
+            }
+
+            .content-wrapper {
+                width: 100%;
+            }
+
+            #content {
+                width: 553px;
+            }
+
+}
+
+/* screw writing importants, just stick it in max width since these classes are not shared between sizes */
+@media (max-width:767px) { 
+    .left-half div {
+        width: 90%;
+        height: 150px;
+    }
+    
+    #note {
+        width: 80%;
+        background-color: #FFD52D;
+        background-image: none;
+        height: auto;
+    }
+	#slide-nav .container {
+	    margin: 0!important;
+	    padding: 0!important;
+      height:100%;
+	}
+	#slide-nav .navbar-header {
+	    margin: 0 auto;
+	    padding: 0 15px;
+	}
+	#slide-nav .navbar.slide-active {
+	    position: absolute;
+	    width: 80%;
+	    top: -1px;
+	    z-index: 1000;
+	}
+	#slide-nav #slidemenu {
+	    background: #f7f7f7;
+	    left: -100%;
+	    width: 40%;
+	    min-width: 0;
+	    position: absolute;
+	    padding-left: 0;
+	    z-index: 2;
+	    top: -8px;
+	    margin: 0;
+	}
+
+	#slide-nav #slidemenu .navbar-nav {
+	    min-width: 0;
+	    width: 100%;
+	    margin: 0;
+	}
+	#slide-nav #slidemenu .navbar-nav .dropdown-menu li a {
+	    min-width: 0;
+	    width: 80%;
+	    white-space: normal;
+	}
+	#slide-nav {
+	    border-top: 0
+	}
+	#slide-nav.navbar-inverse #slidemenu {
+	    background: #333
+	}
+    
+    .navbar-right-link {
+        float: none !important;
+        padding: 0 !important;
+    }
+    
+    .navbar-right-link a {
+        display: block;
+        padding: 14px;
+        font-size: 1.1rem;
+    }
+    
+    .navbar-nav li {
+        float: none;
+        text-align: center;
+        padding: 15px 0;
+        display: block;
+    }
+    
+    .navbar-nav li a {
+        display: block;
+    }
+        
+	/* this is behind the navigation but the navigation is not inside it so that the navigation is accessible and scrolls*/
+	#navbar-height-col {
+	    position: fixed;
+	    top: 0;
+	    height: 100%;
+      bottom:0;
+	    width: 80%;
+	    left: -80%;
+	    background: #f7f7f7;
+	}
+	#navbar-height-col.inverse {
+	    background: #333;
+	    z-index: 1;
+	    border: 0;
+	}
+	#slide-nav .navbar-form {
+	    width: 100%;
+	    margin: 8px 0;
+	    text-align: center;
+	    overflow: hidden;
+	    /*fast clearfixer*/
+	}
+	#slide-nav .navbar-form .form-control {
+	    text-align: center
+	}
+	#slide-nav .navbar-form .btn {
+	    width: 100%
+	}
+    .navbar-toggle {
+        margin: 5px 10px 0 0 !important;
+    }
+}
+@media (min-width:768px) { 
+	#page-content {
+	    left: 0!important
+	}
+	.navbar.navbar-fixed-top.slide-active {
+	    position: fixed
+	}
+	.navbar-header {
+	    left: 0!important
+	}
+    
+    .navbar-toggle {
+        display: none;
+    }
+}
+    
+</style>
+    
+<body>
+    
+    <body data-spy="scroll" data-target=".navbar" data-offset="50">
+         <div class="navbar navbar-fixed-top" role="navigation" id="slide-nav">
+              <div class="container-fluid">
+               <div class="navbar-header">
+                <a class="navbar-toggle"> 
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                 </a>
+                <a class="navbar-brand" href="index.html"><img src="http://seasonedsocks.com/img/sock.png" id="sock">Seasoned Socks</a>
+               </div>
+
+               <div id="slidemenu">
+                 <!--
+                      <form class="navbar-form navbar-right" role="form">
+                        <div class="form-group">
+                          <input type="search" placeholder="search" class="form-control">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Search</button>
+                      </form>
+                 -->
+                <ul class="nav navbar-nav">
+                 <li><a href="#about">About</a></li>
+                 <li><a href="#contact">Contact</a></li>
+                 <li class="navbar-right-link"><a class="btn btn-primary btn-sm" href="buy.html">Buy</a></li>
+                </ul>
+
+               </div>
+              </div>
+            </div>
+        
+        <div class="clear"></div>
+        
+        <div class="content-wrapper">
+            <div class="content">
+                <div class="left-half-container">
+                    <div class="left-half">
+                        <div></div>
+                    </div>
+                </div>
+
+                <div class="right-half-container">
+                    <div class="right-half">
+                        <div id="order-box">
+                            <p id="order-box-title">Personalize Your Seasoned Sock</p>
+                            <hr>
+                            <p id="order-box-price">$9.99</p>
+                            <p id="order-box-text-limit">Please limit note to 130 characters</p>
+                                <div id="note">
+                                    <form method="post">
+                                        <textarea autofocus maxlength="130" type="text" name="note" id="note-contents"></textarea>
+                                    </form>
+                                </div>
+                            <div id="paypal-button"></div>
+                            <button type="submit" class="btn btn-primary" id="button-add-to-cart">Add to Cart</button>
+                            <div style="text-align: left; width: 60%; margin: 0 auto; display: block">
+                                <p>Send a seasoned sock with your personalized note inside to whoever you want in the U.S!</p>
+                                <p>To order a seasoned sock:</p>
+                                <ol style="padding-left: 5%">
+                                    <li>Write your note above</li>
+                                    <li>Add to cart</li>
+                                    <li>Enter the <span style="font-weight: bold">recipients shipping address</span> and <span style="font-weight:bold">your email address</span> on the checkout page and finish your purchase</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+        <script>
+            paypal.Button.render({
+
+                env: 'sandbox', // Specify 'sandbox' for the test environment or production for the real thing
+
+                payment: function() {
+                    // Set up the payment here, when the buyer clicks on the button
+                },
+
+                onAuthorize: function(data, actions) {
+                    // Execute the payment here, when the buyer approves the transaction
+               }
+
+            }, '#paypal-button');
+
+        </script>
+<!--
+    <div id="checkout">
+         
+             <form method="post">
+        
+            <p>Email:<input type="text" name="email" id="email"></p>
+            
+            <br>
+            
+            <p id="pPass"> Password:<input type="password" id="pass" name="password"></p>
+            
+            <br>
+            
+            <button type="submit">Sign Up</button>
+        
+        </form>
+             
+         </div>
+    -->
+</body>    

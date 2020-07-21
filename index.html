@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    
+<head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="wot-verification" content="b6f3eb8d5522fb7c1ee0"/>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+      
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+      
+    <link rel="stylesheet" href="css/slideshow.css"> 
+      
+    <link rel="stylesheet" href="css/slide-menu.css"> 
+      
+    <link rel="stylesheet" href="css/main.css">
+    
+    <link rel="stylesheet" href="css/include.css">
+      
+    <script src="js/slidemenu.js"></script>
+      
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+        
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
+</head>
+    
+    <style>
+    
+        body {
+            position: relative;
+            background-color: #efeded;
+        }
+        
+         #section1 {
+            background-image: url("img/street.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 550px;
+        }
+        
+        #section1-container {
+            margin-top: 46px;
+            padding-top: 17%;
+        }
+        
+        #section1-container div {
+            display: inline-block;
+            margin-left: 13%;
+        }
+        
+        #section1-container div h1 {
+            margin-bottom: 0;  
+            background-color: lightgray;
+            opacity: 0.7;
+        }
+        
+        
+        #section1-container div p {
+            background-color: lightgray;
+            opacity: 0.7;
+            font-size: 1.5rem;
+        }
+        
+         #section2 {
+             padding-top: 1%;
+             padding-bottom: 1%;
+             height: 800px;
+             background-image: url("img/grasscrop.jpg");
+             background-size: cover;
+        }
+        
+        #section2-container {
+            width: 500px;
+            float: right;
+            background-color: aliceblue;
+            background: rgba(240,248,255, 0.8);
+            
+            margin: 10% 5% 0 0;
+        }
+        
+        
+        #section2-container h1 {
+            padding-left: 4%;
+            font-size: 4rem; 
+        }
+        #section2-container p {
+            font-size: 1.6rem;
+            padding-left: 4%;
+        }
+        
+        #navbar {
+            padding-left: 0;
+            padding-right: 0;
+        }
+        
+        .navbar {
+            background-color: #efeded;
+            padding: .1rem 0;
+        }
+        
+        #sock {
+            height: 30px;
+            float: left;
+        }
+        
+        a {
+            color: black;
+        }
+        
+        a:hover {
+            color: sandybrown;
+        }
+        
+        .navbar-brand {
+            padding: 0;
+        }
+        
+        .nav-link {
+            color: #474545;
+        }
+        
+        #banner {
+            margin-top: 10%;
+            
+        }
+        
+        a:link {
+            text-decoration: none;
+        }
+        
+        .pull-xs-right {
+            font-size: 1.1em;
+            color: black;
+        }
+        
+        .display-3 {
+            /*padding: 19% 0 0 20%;*/
+            color: black;
+        }
+        
+        .lead {
+            color: black;
+        }
+        
+        #block p {
+            padding-left: 5px;
+            width: 38%;
+            background-color: ghostwhite;
+            background-color: rgba(255,255,255, 0.6);
+        }
+        
+        .footer p {
+            position: absolute;
+            bottom: 0;
+            right: 0;        
+            color:white;
+            padding-right: 1%;
+        }
+        
+        #check-it-out {
+            border:none;    
+            padding:0!important;
+            font-size: 1em;
+            cursor: pointer;
+            width: 112px;
+            border-radius: 5px;
+            color: white;
+            background-color: #0048FF;
+            height: 40px;
+            margin: 0 0 5% 4%;
+        }
+        
+        @media (max-width: 768px) {
+            .lead {
+                /*background-color: white;*/
+            }
+            
+            #section1 {
+                height: auto;
+            }
+            
+            #section1-container {
+                padding-bottom: 10%;
+            }
+            
+            #section1-container div {
+                width: 100%;
+                margin: 0 auto;
+                padding: 0;
+                
+            }
+                      
+            #section1-container p {
+                padding: 1%;
+                width: 100%;
+            }
+            
+            #section2 {
+                height: 600px;
+                padding-top: 14%;
+            }
+            
+            #section2-container, #section1-container {
+                width: 100%;
+            }
+            
+            #section2-container {
+                margin: 0 auto;
+            }
+            
+        }
+        
+         @media (max-width:767px) { 
+            #slide-nav .container {
+                margin: 0!important;
+                padding: 0!important;
+              height:100%;
+            }
+            #slide-nav .navbar-header {
+                margin: 0 auto;
+                padding: 0 15px;
+            }
+            #slide-nav .navbar.slide-active {
+                position: absolute;
+                width: 80%;
+                top: -1px;
+                z-index: 1000;
+            }
+            #slide-nav #slidemenu {
+                background: #f7f7f7;
+                left: -100%;
+                width: 40%;
+                min-width: 0;
+                position: absolute;
+                padding-left: 0;
+                z-index: 2;
+                top: -8px;
+                margin: 0;
+            }
+
+            #slide-nav #slidemenu .navbar-nav {
+                min-width: 0;
+                width: 100%;
+                margin: 0;
+            }
+            #slide-nav #slidemenu .navbar-nav .dropdown-menu li a {
+                min-width: 0;
+                width: 80%;
+                white-space: normal;
+            }
+            #slide-nav {
+                border-top: 0
+            }
+            #slide-nav.navbar-inverse #slidemenu {
+                background: #333
+            }
+
+            .navbar-right-link {
+                float: none !important;
+                padding: 0 !important;
+                display: block;
+            }
+
+            .navbar-right-link a {
+                display: block;
+                font-size: 1.1rem;
+            }
+
+            .navbar-nav li {
+                float: none;
+                text-align: center;
+                padding: 15px 0;
+                width: 100%;
+                display: block;
+            }
+
+            .navbar-nav li a {
+                display: block;
+            }
+
+            /* this is behind the navigation but the navigation is not inside it so that the navigation is accessible and scrolls*/
+            #navbar-height-col {
+                position: fixed;
+                top: 0;
+                height: 100%;
+              bottom:0;
+                width: 80%;
+                left: -80%;
+                background: #f7f7f7;
+            }
+            #navbar-height-col.inverse {
+                background: #333;
+                z-index: 1;
+                border: 0;
+            }
+            #slide-nav .navbar-form {
+                width: 100%;
+                margin: 8px 0;
+                text-align: center;
+                overflow: hidden;
+                /*fast clearfixer*/
+            }
+            #slide-nav .navbar-form .form-control {
+                text-align: center
+            }
+            #slide-nav .navbar-form .btn {
+                width: 100%
+            }
+            .navbar-toggle {
+                margin: 5px 10px 0 0 !important;
+            }
+        }
+        @media (min-width:768px) { 
+            #page-content {
+                left: 0!important
+            }
+            .navbar.navbar-fixed-top.slide-active {
+                position: fixed
+            }
+            .navbar-header {
+                left: 0!important
+            }
+
+            .navbar-toggle {
+                display: none;
+            }
+
+        }
+    </style>
+    
+    <body data-spy="scroll" data-target=".navbar" data-offset="50">
+    
+    <body data-spy="scroll" data-target=".navbar" data-offset="50">
+         <div class="navbar navbar-fixed-top" role="navigation" id="slide-nav">
+              <div class="container-fluid">
+               <div class="navbar-header">
+                <a class="navbar-toggle"> 
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                 </a>
+                <a class="navbar-brand" href="index.html"><img src="img/sock.png" id="sock">Seasoned Socks</a>
+               </div>
+
+               <div id="slidemenu">
+                 <!--
+                      <form class="navbar-form navbar-right" role="form">
+                        <div class="form-group">
+                          <input type="search" placeholder="search" class="form-control">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Search</button>
+                      </form>
+                 -->
+                <ul class="nav navbar-nav">
+                 <li><a href="index.html">Home</a></li>
+                 <li><a href="about.html">About</a></li>
+                 <li><a href="contact.html">Contact</a></li>
+                 <li><a href="samples.html">Samples</a></li>
+                 <li class="navbar-right-link"><a class="btn btn-primary btn-sm" href="buy.php">Buy</a></li>
+                </ul>
+
+               </div>
+              </div>
+            </div>
+          
+        <div id="section1" class="container-fluid sections">
+            <div id="section1-container">
+                <div>
+                    <h1 class="display-3">Seasoned Socks</h1>
+                    <p class="lead">Send socks with personalized notes inside</p>
+                </div>
+            </div>    
+        </div>
+        
+        <div id="section2" class="container-fluid sections">
+            <div id="section2-container">
+                <h1>What is it? </h1>
+                <div style="clear:both"></div>
+                <p>Seasoned Socks is just that. A random seasoned sock with a personalized note written on a random piece of paper crumpled up and put inside.
+                    Then mailed out to whoever you want.
+                </p>
+                <br>
+                <form action="about.html">
+                            <input type="submit" value="Check it Out!" id="check-it-out">
+                        </form>
+
+            </div>
+            <div class="footer"></div>
+        </div>
+        <div class="clear"></div>
+            <div style="float: right"><a href="https://seasonedsocks.com/privacy-policy.html">Privacy Policy</a></div>
+    </body>
+
+<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
+    <script type="text/javascript">
+            
+            $(function(){
+            $(".footer").load("footer.html");
+        })
+            
+            // Auto validates form elements e.g. email
+            $('#form-validate').validate();
+            
+            $(document).ready(function () {
+
+
+                //stick in the fixed 100% height behind the navbar but don't wrap it
+                $('#slide-nav.navbar-inverse').after($('<div class="inverse" id="navbar-height-col"></div>'));
+
+                $('#slide-nav.navbar-default').after($('<div id="navbar-height-col"></div>'));  
+
+                // Enter your ids or classes
+                var toggler = '.navbar-toggle';
+                var pagewrapper = '#page-content';
+                var navigationwrapper = '.navbar-header';
+                var menuwidth = '100%'; // the menu inside the slide menu itself
+                var slidewidth = '40%';
+                var menuneg = '-100%';
+                var slideneg = '-80%';
+
+
+                $("#slide-nav").on("click", toggler, function (e) {
+
+                    var selected = $(this).hasClass('slide-active');
+
+                    $('#slidemenu').stop().animate({
+                        left: selected ? menuneg : '0px'
+                    });
+
+                    $('#navbar-height-col').stop().animate({
+                        left: selected ? slideneg : '0px'
+                    });
+
+                    $(pagewrapper).stop().animate({
+                        left: selected ? '0px' : slidewidth
+                    });
+
+                    $(navigationwrapper).stop().animate({
+                        left: selected ? '0px' : slidewidth
+                    });
+
+
+                    $(this).toggleClass('slide-active', !selected);
+                    $('#slidemenu').toggleClass('slide-active');
+
+
+                    $('#page-content, .navbar, body, .navbar-header').toggleClass('slide-active');
+
+
+                });
+
+
+                var selected = '#slidemenu, #page-content, body, .navbar, .navbar-header';
+
+
+                $(window).on("resize", function () {
+
+                    if ($(window).width() > 767 && $('.navbar-toggle').is(':hidden')) {
+                        $(selected).removeClass('slide-active');
+                    }
+
+                });
+
+            });
+            
+        </script>

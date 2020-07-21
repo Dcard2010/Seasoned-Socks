@@ -1,0 +1,104 @@
+body {
+position: relative;
+background-color: #efeded;
+}
+
+.clear {
+    clear: both;
+}
+
+.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+}
+#navbar {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.navbar {
+    background-color: #efeded;
+    margin: 0 auto;
+    padding: .1rem 0;
+}
+
+.navbar-brand {
+    padding: 0;
+    margin-top: 5px;
+}
+
+.navbar-container {
+    float: left;
+    padding-top: 4px;
+
+}
+
+.navbar-right-link {
+    float: right !important;
+    padding-right: 0 !important;
+}
+.navbar-link {
+    padding-left: 10px;
+}
+
+.nav-link {
+    color: #474545;
+}
+
+#sock {
+    height: 30px;
+    float: left;
+    margin-top: 4px;
+}
+
+a {
+    color: black;
+}
+
+a:hover {
+    color: sandybrown;
+}
+
+a:link {
+    text-decoration: none;
+}
+        
+.btn {
+    padding: .55rem 1rem;
+}
+
+.navbar-right-link { 
+    width: 100px;
+}
+
+.content-wrapper {
+width: 1200px;
+display: block;
+margin: 0 auto;
+overflow: hidden;
+padding-top: 20px;
+background-color: white;
+}
+
+.navbar-nav li {
+    float: left;
+    padding: 3px;
+    padding-right: 15px;
+    display: table;
+    height: 45px;
+}
+        
+.navbar-nav li a {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#buy-button {
+    display: block;
+    margin: 0 auto;
+    font-size: 1.15rem;
+    height: 50px;
+    width: 150px;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
