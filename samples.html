@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    
+  <head>
+    <!-- Required meta tags always come first -->
+      <title>Shop Seasoned Socks</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+      
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+      
+    <link rel="stylesheet" href="css/slideshow.css"> 
+      
+    <link rel="stylesheet" href="css/slide-menu.css"> 
+      
+    <link rel="stylesheet" href="css/main.css"> 
+
+    <link rel="stylesheet" href="css/include.css"> 
+      
+    <script src="js/slidemenu.js"></script>
+      
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+        
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
+
+   </head>
+    
+    <style>
+    
+        .content {
+            overflow: hidden;
+            width: 829px;
+            margin: 0 auto;
+        }
+
+        #slideshow-wrapper {
+            padding-top: 40px;
+
+        }
+        
+        #slideshow-container {
+            
+        }
+        
+        #slideshow-container img{
+            width: 100%;
+        }
+        
+        .product-box {
+            width: 250px;
+            float: left;
+            margin: 13px;
+            height: 250px;
+        }
+
+        .product-img {
+            width: 100%;
+            height: 80%;
+        }
+        
+        #dress-socks {
+            background-image: url(img/dress.jpg);
+            background-size: cover;
+        }
+        
+        #white-socks {
+            background-image: url(img/white.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        
+        #toe-socks {
+            background-image: url(img/toe.jpg);
+            background-size: cover;
+        }
+        
+        #stockings {
+            background-image: url(img/stocking.jpg);
+            background-size: cover;   
+
+        }
+        
+        #baby-socks {
+            background-image: url(img/baby.jpg);
+            background-size: cover;   
+
+        }
+        
+        #womens-socks {
+            background-image: url(img/women.jpg);
+            background-size: cover;   
+
+        }
+        
+        #holiday-socks {
+            background-image: url(img/holiday.jpg);
+            background-size: cover;   
+        }
+        
+        #sport-socks {
+            background-image: url(img/sport.jpg);
+            background-size: cover;
+        }
+        
+        #weird-socks {
+            background-image: url(img/weird.jpg);
+            background-size: cover;
+        }
+
+        .product-text {
+            display: table;
+            height: 51px;
+            width: 100%;
+        }
+
+        .product-text div {
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+        }
+
+        div h3 {
+            text-align: center;
+            margin-bottom: 2%;
+            padding-top: 10px;
+        }
+
+
+        @media (max-width: 1200px) {
+
+            .container {
+                width: 100%;
+            }
+
+            .navbar {
+                width: 100%;
+                padding: .1rem 0;
+            }
+
+            .content-wrapper {
+                width: 100%;
+            }    
+
+        }
+
+        @media (max-width: 850px) {
+            .content {
+                width: 553px;
+            }
+        }
+
+        @media (max-width: 565px) {
+            .content {
+                width: 277px;
+            }   
+        }
+
+        /*--- SLIDE MENU ---*/
+
+        /* screw writing importants, just stick it in max width since these classes are not shared between sizes */
+        @media (max-width:767px) { 
+            #slide-nav .container {
+                margin: 0!important;
+                padding: 0!important;
+              height:100%;
+            }
+            #slide-nav .navbar-header {
+                margin: 0 auto;
+                padding: 0 15px;
+            }
+            #slide-nav .navbar.slide-active {
+                position: absolute;
+                width: 80%;
+                top: -1px;
+                z-index: 1000;
+            }
+            #slide-nav #slidemenu {
+                background: #f7f7f7;
+                left: -100%;
+                width: 40%;
+                min-width: 0;
+                position: absolute;
+                padding-left: 0;
+                z-index: 2;
+                top: -8px;
+                margin: 0;
+            }
+
+            #slide-nav #slidemenu .navbar-nav {
+                min-width: 0;
+                width: 100%;
+                margin: 0;
+            }
+            #slide-nav #slidemenu .navbar-nav .dropdown-menu li a {
+                min-width: 0;
+                width: 80%;
+                white-space: normal;
+            }
+            #slide-nav {
+                border-top: 0
+            }
+            #slide-nav.navbar-inverse #slidemenu {
+                background: #333
+            }
+
+            .navbar-right-link {
+                float: none !important;
+                padding: 0 !important;
+                display: block;
+            }
+
+            .navbar-right-link a {
+                display: block;
+                font-size: 1.1rem;
+            }
+
+            .navbar-nav li {
+                float: none;
+                text-align: center;
+                padding: 15px 0;
+                width: 100%;
+                display: block;
+            }
+
+            .navbar-nav li a {
+                display: block;
+            }
+
+            /* this is behind the navigation but the navigation is not inside it so that the navigation is accessible and scrolls*/
+            #navbar-height-col {
+                position: fixed;
+                top: 0;
+                height: 100%;
+              bottom:0;
+                width: 80%;
+                left: -80%;
+                background: #f7f7f7;
+            }
+            #navbar-height-col.inverse {
+                background: #333;
+                z-index: 1;
+                border: 0;
+            }
+            #slide-nav .navbar-form {
+                width: 100%;
+                margin: 8px 0;
+                text-align: center;
+                overflow: hidden;
+                /*fast clearfixer*/
+            }
+            #slide-nav .navbar-form .form-control {
+                text-align: center
+            }
+            #slide-nav .navbar-form .btn {
+                width: 100%
+            }
+            .navbar-toggle {
+                margin: 5px 10px 0 0 !important;
+            }
+        }
+        @media (min-width:768px) { 
+            #page-content {
+                left: 0!important
+            }
+            .navbar.navbar-fixed-top.slide-active {
+                position: fixed
+            }
+            .navbar-header {
+                left: 0!important
+            }
+
+            .navbar-toggle {
+                display: none;
+            }
+
+        }
+            
+</style>
+    
+    <body data-spy="scroll" data-target=".navbar" data-offset="50">
+         <div class="navbar navbar-fixed-top" role="navigation" id="slide-nav">
+              <div class="container-fluid">
+               <div class="navbar-header">
+                <a class="navbar-toggle"> 
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                 </a>
+                <a class="navbar-brand" href="index.html"><img src="https://seasonedsocks.com/img/sock.png" id="sock">Seasoned Socks</a>
+               </div>
+
+               <div id="slidemenu">
+                 <!--
+                      <form class="navbar-form navbar-right" role="form">
+                        <div class="form-group">
+                          <input type="search" placeholder="search" class="form-control">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Search</button>
+                      </form>
+                 -->
+                <ul class="nav navbar-nav">
+                 <li><a href="index.html">Home</a></li>    
+                 <li><a href="about.html">About</a></li>
+                 <li><a href="contact.html">Contact</a></li>
+                 <li><a href="samples.html">Samples</a></li>
+                 <li class="navbar-right-link"><a class="btn btn-primary btn-sm" href="buy.php">Buy</a></li>
+                </ul>
+
+               </div>
+              </div>
+            </div>
+        
+        <div id="slideshow-wrapper">
+        
+            <div id="slideshow">
+
+                
+                    <!--
+                    <div class="mySlides fade">
+                      <div class="numbertext">1 / 3</div>
+                      <img src="https://seasonedsocks.com/img/banner.jpg" style="width:100%">
+                      <div class="text"></div>
+                    </div>
+                    
+                    <div class="mySlides fade">
+                      <div class="numbertext">2 / 3</div>
+                      <img src="https://seasonedsocks.com/img/grasscrop.jpg" style="width:100%">
+                      <div class="text"></div>
+                    </div>
+
+                    <div class="mySlides fade">
+                      <div class="numbertext">3 / 3</div>
+                      <img src="https://seasonedsocks.com/img/grasscrop.jpg" style="width:100%">
+                      <div class="text"></div>
+                    </div>
+                    -->
+                </div>
+                
+                <div class="clear"></div>
+
+                <div style="text-align:center; display: none;">
+                  <span class="dot"></span> 
+                  <span class="dot"></span> 
+                  <span class="dot"></span> 
+                </div>
+
+            </div>
+            
+        </div>
+        
+        <div class="content-wrapper" style="padding-top: 0 !important">
+          
+        <div>
+            <div id="slideshow-container">
+                    <img src="img/banner.jpg">
+         
+            <h3>Products</h3>
+         
+        </div>
+
+        <div class="clear"></div>
+             
+            <div class="content">
+                             
+                <p style="margin-left: 13px">Here is a sample of the random socks we have available</p>
+         
+            <div class="product-box">
+             
+                <div class="product-img" id="dress-socks"></div>
+                 
+                        <div class="product-text">
+
+                            <div>Business Socks</div>
+
+                        </div>
+
+                </div>
+
+                <div class="product-box">
+
+                    <div class="product-img" id="white-socks"></div>
+
+                      <div class="product-text">
+
+                        <div>Classic White Socks</div>
+
+                    </div>
+
+                </div>
+
+                <div class="product-box">
+
+                    <div class="product-img" id="toe-socks"></div>
+
+                        <div class="product-text">
+
+                            <div>Toe Socks</div>
+
+                        </div>
+                </div>
+                 
+                <div class="product-box">
+
+                    <div class="product-img" id="stockings"></div>
+
+                        <div class="product-text">
+
+                            <div>Stockings</div>
+
+                        </div>
+                </div>
+                 
+                <div class="product-box">
+
+                    <div class="product-img"  id="baby-socks"></div>
+
+                        <div class="product-text">
+
+                            <div>Baby Socks</div>
+
+                        </div>
+                </div>
+                     
+                <div class="product-box">
+
+                    <div class="product-img" id="womens-socks"></div>
+
+                        <div class="product-text">
+
+                            <div>Women's Socks</div>
+
+                        </div>
+                </div>
+                     
+                <div class="product-box">
+
+                    <div class="product-img" id="holiday-socks"></div>
+
+                        <div class="product-text">
+
+                            <div>Holiday Socks</div>
+
+                        </div>
+                </div>
+                
+                <div class="product-box">
+
+                    <div class="product-img" id="sport-socks"></div>
+
+                        <div class="product-text">
+
+                            <div>Sport Socks</div>
+
+                        </div>
+                </div>
+                 
+                <div class="product-box">
+
+                    <div class="product-img" id="weird-socks"></div>
+
+                        <div class="product-text">
+
+                            <div>Weird Socks</div>
+
+                        </div>
+                     
+                </div>
+                <div class="clear"></div>
+                
+                <a class="btn btn-large btn-primary" id="buy-button" href="buy.php" role="button">Send a Sock</a>
+            </div>
+         
+            <div class="footer"></div>
+        </div>
+        
+        <script>
+            
+        $(function(){
+            $(".footer").load("footer.html");
+        })
+        
+        /*
+            var slideIndex = 0;
+            showSlides();
+            
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+
+            function showSlides() {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+                for (i = 0; i < slides.length; i++) {
+                   slides[i].style.display = "none";  
+                }
+                slideIndex++;
+                if (slideIndex> slides.length) {slideIndex = 1}    
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block";  
+                dots[slideIndex-1].className += " active";
+                setTimeout(showSlides, 5000); // Change image every 2 seconds
+            }
+        */    
+                $(document).ready(function () {
+
+        
+    //stick in the fixed 100% height behind the navbar but don't wrap it
+    $('#slide-nav.navbar-inverse').after($('<div class="inverse" id="navbar-height-col"></div>'));
+  
+    $('#slide-nav.navbar-default').after($('<div id="navbar-height-col"></div>'));  
+
+    // Enter your ids or classes
+    var toggler = '.navbar-toggle';
+    var pagewrapper = '#page-content';
+    var navigationwrapper = '.navbar-header';
+    var menuwidth = '100%'; // the menu inside the slide menu itself
+    var slidewidth = '40%';
+    var menuneg = '-100%';
+    var slideneg = '-80%';
+
+
+    $("#slide-nav").on("click", toggler, function (e) {
+
+        var selected = $(this).hasClass('slide-active');
+
+        $('#slidemenu').stop().animate({
+            left: selected ? menuneg : '0px'
+        });
+
+        $('#navbar-height-col').stop().animate({
+            left: selected ? slideneg : '0px'
+        });
+
+        $(pagewrapper).stop().animate({
+            left: selected ? '0px' : slidewidth
+        });
+
+        $(navigationwrapper).stop().animate({
+            left: selected ? '0px' : slidewidth
+        });
+
+
+        $(this).toggleClass('slide-active', !selected);
+        $('#slidemenu').toggleClass('slide-active');
+
+
+        $('#page-content, .navbar, body, .navbar-header').toggleClass('slide-active');
+
+
+    });
+
+
+    var selected = '#slidemenu, #page-content, body, .navbar, .navbar-header';
+
+
+    $(window).on("resize", function () {
+
+        if ($(window).width() > 767 && $('.navbar-toggle').is(':hidden')) {
+            $(selected).removeClass('slide-active');
+        }
+        
+    });
+
+});
+        </script>
+</body>
